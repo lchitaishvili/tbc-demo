@@ -1,0 +1,19 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    >div {
+
+        &:first-of-type {
+            >span {
+                margin-right: 5px;
+            }
+        }
+        &:last-of-type {
+            >fa-icon {
+                margin-right: 5px;
+            }
+        }
+    }
+}

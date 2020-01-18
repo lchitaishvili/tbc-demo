@@ -1,43 +1,85 @@
-header {
-    width: 100%;
-    background: rgba(255,255,255,.4);
-    box-shadow: 0 0 1px rgba(0,0,0,.25);
-    transition: background-color .3s ease-in-out;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
+    img {
+        cursor: pointer;
+    }
 
-        img {
-            cursor: pointer;
-        }
+    .menu {
+        // svg {
+        //     cursor: pointer;
+        //     &:hover {
+        //         #homangle {
+        //             stroke-dashoffset: 2000;                        
+        //         }
 
-        .menu {
+        //     }
+           
+        //     #homangle{
+        //         stroke-dasharray: 2000, 2000;
+        //         stroke-dashoffset: 0;
+        //         transition: stroke-dashoffset 0.7s ease;
+        //     }
+        // }
+        
+        ul {
+            display: flex;
 
-        }
-    
-        .user {
-            >button {
-                border: 1px solid #333;
-                cursor: pointer;
-                background: rgba(255,255,255,.4);
-
-                &:hover {
-                    background: #eeeeee;
-                }
+            li {
+                margin-right: 50px;
 
                 &:last-of-type {
-                    margin: 0;
+                    margin-right: 0;
                 }
 
-                >fa-icon {
-                    margin-right: 5px;
-                }
-                .text {
+                a {
                     font-weight: 500;
+                    text-decoration: none;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        width: 50%;
+                        position: relative;
+                        background: #333;
+                        margin-top: 5px;
+                        transition: width .5s;
+                    }
+
+                    &:hover {
+
+                        &::after {
+                            width: 100%;
+                        }
+                    }
                 }
+            }
+        }
+    }
+
+    .user {
+        >button {
+            border: 1px solid #333;
+            cursor: pointer;
+            background: rgba(255,255,255,.4);
+
+            &:hover {
+                background: #eeeeee;
+            }
+
+            &:last-of-type {
+                margin: 0;
+            }
+
+            >fa-icon {
+                margin-right: 5px;
+            }
+            .text {
+                font-weight: 500;
             }
         }
     }
