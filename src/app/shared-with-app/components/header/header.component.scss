@@ -1,0 +1,44 @@
+header {
+    width: 100%;
+    background: rgba(255,255,255,.4);
+    box-shadow: 0 0 1px rgba(0,0,0,.25);
+    transition: background-color .3s ease-in-out;
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        img {
+            cursor: pointer;
+        }
+
+        .menu {
+
+        }
+    
+        .user {
+            >button {
+                border: 1px solid #333;
+                cursor: pointer;
+                background: rgba(255,255,255,.4);
+
+                &:hover {
+                    background: #eeeeee;
+                }
+
+                &:last-of-type {
+                    margin: 0;
+                }
+
+                >fa-icon {
+                    margin-right: 5px;
+                }
+                .text {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
